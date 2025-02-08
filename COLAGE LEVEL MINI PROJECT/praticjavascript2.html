@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Example</title>
+    <script>
+        // Function to be called when the button is clicked
+        function calculateResult() {
+            // Get the values from the input fields
+            let no1 = parseInt(document.getElementById("no1").value);
+            let no2 = parseInt(document.getElementById("no2").value);
+
+            // Check if the values are valid numbers
+            if (isNaN(no1) || isNaN(no2)) {
+                alert("Please enter valid numbers.");
+            } else {
+                // Calculate the sum
+                let result = no1 + no2;
+                // Display the result in an alert
+                alert("The result is: " + result);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+    <p>Enter the two numbers below:</p>
+    
+    <label for="no1">Enter 1st number:</label>
+    <input type="text" id="no1"><br><br>
+    
+    <label for="no2">Enter 2nd number:</label>
+    <input type="text" id="no2"><br><br>
+    
+    <button onclick="calculateResult()">Calculate Result</button>
+</body>
+</html>
+
